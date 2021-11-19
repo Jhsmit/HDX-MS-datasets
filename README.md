@@ -1,2 +1,2 @@
-# HDX-MS_datasets
+# HDX-MS-datasets
 Repository for HDX-MS datasets
