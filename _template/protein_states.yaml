@@ -1,0 +1,38 @@
+data_files:
+  data_1:
+    filename: data_file.csv
+    format: DynamX
+  data_2:
+    filename: data_FD.csv
+  protein_structure:
+    filename: structure/1qyn.pdb
+    format: pdb
+
+state_label:
+  FD_control:
+    data_file: data_FD
+    state: SecB WT apo
+    exposure:
+      value: 0.167
+      unit: min
+    description: Short description of FD control
+  data_file: data_1
+  state: protein_state
+  pH: 7.5
+  d_percentage: 90.
+  temperature:
+    value: 30.
+    unit: Celsius
+  sequence: GGG  # FASTA sequence of the protein (state)
+  n_term: 1  # Residue number of the n-terminal residue. Can be negative in case of affinity tags. Should map to PDB structure file
+  c_term: 1  # Residue number of c-terminal residue.
+  description:
+    oligomeric_state: 1
+    ligand: ATP
+    chaotrope: null
+    mutations:
+      - A123B
+      - H484Q
+    deletions:
+      - [1, 20]
+
