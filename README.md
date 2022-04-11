@@ -1,14 +1,20 @@
 # HDX-MS-datasets
 Repository for HDX-MS datasets
 
-The repository is a work-in-progress.
 
 The aim of this repository is to collect curated bottom-up HDX-MS datasets for automated
-processing, data mining and interactive visualization. 
+processing, data mining and interactive visualization.
+The repository is a work-in-progress.
+
+One dataset / jobfile is added for testing purposes. This currently uses the PyHDX 0.4.0b9
+state data yaml spec and jobfile API. Jobfiles might be better suited to placed in seperate 
+repositories at a later data such that this database can be downstream-software agnostic
+and only features as a curated and annotated database.
 
 Datasets should consist of .csv D-uptake/exposure peptide tables. Each dataset is described by
-a `metadata.yaml` file and a `protein_states.yaml` file. Calculation of ΔG values and protection
-factors are scheduled automatically from a `pyhdx_jobs.yaml` file. 
+a `metadata.yaml` file and a `protein_states.yaml` file. 
+
+Ideally, datasets should include more information, such as peptide envelopes or raw MS spectra. 
 
 metadata.yaml
 -------------
@@ -25,8 +31,11 @@ protein_states.yaml
 - labels of each state in the .csv uptake files and which files are used
 - Information on the protein state (mutations, ligands, oligomeric state, buffer conditions)
                    
-pyhdx_jobs.yaml
----------------
+jobfile.yaml
+------------
+
+An alpha implementation of this file was added in PyHDX 0.4.0b9
+
 - Version of PyHDX to use
 - Pipeline specification of fitting procedures to run
 - ΔG fit settings hyperparameters (optimizer, stop_loss, patience)

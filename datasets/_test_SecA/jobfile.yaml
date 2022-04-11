@@ -1,7 +1,10 @@
+# This file is only for testing purposes
+# PyHDX jobfiles are a work in progress
+
 steps:
   - task: load_hdxm_set
     name: load_data
-    state_file: data_states.yaml
+    state_file: protein_states.yaml
   - task: estimate_rates
     name: rates
     hdxm_set: $(load_data.out)
@@ -18,4 +21,4 @@ steps:
       stop_loss: 1.e-6
   - task: save_fit_result
     fit_result: $(global_fit.out)
-    output_dir: fit_result_output_1
+    output_dir: output

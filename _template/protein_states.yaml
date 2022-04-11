@@ -1,10 +1,11 @@
 data_files:
   data_1:
-    filename: data_file.csv
+    filename: data/data_file.csv
     format: DynamX
   data_2:
-    filename: data_FD.csv
-  protein_structure:
+    filename: data/data_FD.csv
+    format: DynamX
+  secb_structure:
     filename: structure/1qyn.pdb
     format: pdb
 
@@ -18,15 +19,17 @@ state_label:
     description: Short description of FD control
   data_file: data_1
   state: protein_state
-  pH: 7.5
+  pH: 7.5  # pH_read, uncorrected
   d_percentage: 90.
   temperature:
     value: 30.
     unit: Celsius
-  sequence: GGG  # FASTA sequence of the protein (state)
-  n_term: 1  # Residue number of the n-terminal residue. Can be negative in case of affinity tags. Should map to PDB structure file
-  c_term: 1  # Residue number of c-terminal residue.
+  sequence: MSEQNNTEMTFQIQRIYTKDISFEAPNAPHVFQKDWQPEVKLDLDTASSQLADDVYEVVLRVTV  # Sequence including deletions and mutations
+  n_term: 1
+  c_term: 155
+  protein_model: secb_structure
   description:
+    concentration: 20e-6 # Concentration of protein during H/D labelling, in M
     oligomeric_state: 1
     ligand: ATP
     chaotrope: null
@@ -34,5 +37,5 @@ state_label:
       - A123B
       - H484Q
     deletions:
-      - [1, 20]
+      - [1, 20]  # Deletion of residues 1 up to and including 20
 
