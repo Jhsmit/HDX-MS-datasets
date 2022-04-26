@@ -1,6 +1,8 @@
 # HDX-MS-datasets
 Repository for HDX-MS datasets
 
+NOTE: This is not the HDX XML dataset format proposed at the HDX-MS 2022 conference, but a .yaml based format currently used in PyHDX. 
+The aim is for thseet formats to converge.
 
 The aim of this repository is to collect curated bottom-up HDX-MS datasets for automated
 processing, data mining and interactive visualization.
