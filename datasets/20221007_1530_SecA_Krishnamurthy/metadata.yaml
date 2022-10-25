@@ -10,9 +10,3 @@ publications:
   - title: A nexus of intrinsic dynamics underlies translocase priming
     DOI: 10.1016/j.str.2021.03.015
     URL: https://www.sciencedirect.com/science/article/pii/S0969212621001131
-
-data:
-  protein: SecB
-  RCSB_entry: null
-  identifier: null
-  description:
