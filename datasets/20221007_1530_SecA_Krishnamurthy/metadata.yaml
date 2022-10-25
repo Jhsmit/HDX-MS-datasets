@@ -1,0 +1,18 @@
+#citation.cff author format?
+authors:
+  - name: Srinath Krishnamurthy
+    email: null
+    ORCID: 0000-0001-5492-4450
+    affiliation: KU Leuven
+
+# List of publications where the datasets are published
+publications:
+  - title: A nexus of intrinsic dynamics underlies translocase priming
+    DOI: 10.1016/j.str.2021.03.015
+    URL: https://www.sciencedirect.com/science/article/pii/S0969212621001131
+
+data:
+  protein: SecB
+  RCSB_entry: null
+  identifier: null
+  description:
