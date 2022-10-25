@@ -1,0 +1,71 @@
+data_files:
+  data_1:
+    filename: data_file.csv
+    format: DynamX
+  data_2:
+    filename: data_FD.csv
+    format: DynamX
+
+metadata:  # global metadata equal for all protein states
+  pH: 7.5
+  protein:
+    uniprot: P10408
+    model: # Optional protein model information
+      database: pdb
+      entry: 2vda
+
+states:
+  SecB_ADP_glucose:  # Short human-readable identifier for this protein HDX state
+    peptides:  # Dictionary of peptides defined for this HDX state (typically experiment, FD_control, ND_control)
+      experiment:
+        data_file: data_1  # Reference to data files defined above
+        state: protein_state  # which protein state to select from data file table
+        exposure: # Exposure value(s) to select from data file table
+          values:
+            - 10
+            - 30
+            - 60
+            - 300
+            - 1200
+          unit: s
+      FD_control:
+        data_file: data_FD
+        state: SecB WT apo
+        exposure:
+          value: 0.167
+          unit: min
+        description:  # Optional additional experimental details per peptide set.
+          method: GdHCl and heating
+          DOI: ...
+    metadata:
+      pH: 7.5  # pH_read, uncorrected
+      d_percentage: 90. # Percentage deuterium in exchange buffer
+      temperature:  # Temperature of the exchange buffer and unit
+        value: 30.
+        unit: Celsius
+      sequence: MSEQNNTEMTFQIQRIYTKDISFEAPNAPHVFQKDWQPEVKLDLDTASSQLADDVYEVVLRVTV  # FASTA Sequence including deletions and mutations, tags
+      n_term: 1  # Residue number of the N terminal residue (can be negative)
+      c_term: 155 # Residue number of the C terminal residue
+      concentration: 20e-6 # Concentration of the protein during H/D labelling, in M
+      oligomeric_state: 1 # Oligomeric state of the protein during H/D labelling
+      ligand: # Section for added ligand(s) during H/D labelling (
+        - name: ATP
+          concentration: 1e-3
+          ChemSpider: 5800
+        - name: glucose
+          concentration: 2e-5
+          InChI: "1S/C6H12O6/c7-1-2-3(8)4(9)5(10)6(11)12-2/h2-11H,1H2/t2-,3-,4+,5-,6?/m1/s1"
+      chaotrope: null
+      mutations:
+        - A123B
+        - H484Q
+      deletions:
+        - [1, 20]  # Deletion of residues 1 up to and including 20
+      protein_complex:  # Description of the protein complex this protein is in
+        - name: SecY # human readable name
+          UniProt: P0AGA2
+          stoichiometry: 1 # Number of this protein per POI
+        - name: SecB
+          UniProt: P0AG86
+          stoichiometry: 2
+

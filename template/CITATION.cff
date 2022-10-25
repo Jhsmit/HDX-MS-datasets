@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "In lieu of an associated paper, please cit this dataset as below"
+authors:
+  - family-names: Englander
+    given-names: Walter
+    orcid: https://orcid.org/0000-0000-0000-0000
+title: "My dataset"
+version: 1.0.0
+doi: 10.5281/zenodo.1234
+date-released: 1970-01-01
