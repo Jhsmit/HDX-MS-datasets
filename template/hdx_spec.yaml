@@ -1,9 +1,9 @@
 data_files:
   data_1:
-    filename: data_file.csv
+    filename: data/data_file.csv
     format: DynamX
   data_2:
-    filename: data_FD.csv
+    filename: data/data_FD.csv
     format: DynamX
 
 metadata:  # global metadata equal for all protein states
@@ -34,10 +34,13 @@ states:
         exposure:
           value: 0.167
           unit: min
-        description:  # Optional additional experimental details per peptide set.
+        description:  # Optional additional experimental details per peptide set of this control.
           method: GdHCl and heating
           DOI: ...
     metadata:
+      description:  # Optional additional experimental details per peptide set (dict / str)
+        method: ...
+        DOI: ...
       pH: 7.5  # pH_read, uncorrected
       d_percentage: 90. # Percentage deuterium in exchange buffer
       temperature:  # Temperature of the exchange buffer and unit
@@ -61,7 +64,7 @@ states:
         - H484Q
       deletions:
         - [1, 20]  # Deletion of residues 1 up to and including 20
-      protein_complex:  # Description of the protein complex this protein is in
+      protein_complex:  # Description of the protein complex this protein is in with
         - name: SecY # human readable name
           UniProt: P0AGA2
           stoichiometry: 1 # Number of this protein per POI
