@@ -1,0 +1,77 @@
+data_files:
+  data_apo:
+    filename: data/ecSecB_apo.csv
+    format: DynamX
+
+  data_dimer:
+    filename: data/ecSecB_dimer.csv
+    format: DynamX
+
+
+metadata:  # global metadata equal for all protein states
+  pH: 8.
+  d_percentage: 90.
+  temperature:
+    value: 30.
+    unit: C
+  protein:
+    uniprot: P0AG86
+    model: # Optional protein model information
+      database: pdb
+      entry: 1QYN
+
+states:
+  SecB_tetramer:  # Short human-readable identifier for this protein HDX state
+    peptides:  # Dictionary of peptides defined for this HDX state (typically experiment, FD_control, ND_control)
+      experiment:
+        data_file: data_apo  # Reference to data files defined above
+        state: SecB WT apo  # which protein state to select from data file table
+        exposure:
+          values:
+            - 0.167
+            - 0.5
+            - 1.
+            - 10.
+            - 100.000008
+          unit: min
+      FD_control:
+        data_file: data_apo
+        state: Full deuteration control
+        exposure:
+          value: 0.167
+          unit: min
+    metadata:
+      sequence: MSEQNNTEMTFQIQRIYTKDISFEAPNAPHVFQKDWQPEVKLDLDTASSQLADDVYEVVLRVTVTASLGEETAFLCEVQQGGIFSIAGIEGTQMAHCLGAYCPNILFPYARECITSMVSRGTFPQLNLAPVNFDALFMNYLQQQAGEGTEEHQDA  # FASTA Sequence including deletions and mutations, tags
+      n_term: 1  # Residue number of the N terminal residue (can be negative)
+      c_term: 155 # Residue number of the C terminal residue
+      oligomeric_state: 4 # Oligomeric state of the protein during H/D labelling
+
+
+  SecB_dimer:  # Short human-readable identifier for this protein HDX state
+    peptides:  # Dictionary of peptides defined for this HDX state (typically experiment, FD_control, ND_control)
+      experiment:
+        data_file: data_dimer  # Reference to data files defined above
+        state: SecB his dimer apo  # which protein state to select from data file table
+        exposure:
+          values:
+            - 0.167
+            - 0.5
+            - 1.
+            - 10.
+            - 100.000008
+          unit: min
+      FD_control:
+        data_file: data_apo
+        state: Full deuteration control
+        exposure:
+          value: 0.167
+          unit: min
+    metadata:
+      sequence: MSEQNNTEMTFQIQRIYTKDISFEAPNAPHVFQKDWQPEVKLDLDTASSQLADDVYEVVLRVTVTASLGEETAFLCEVQQGGIFSIAGIEGTQMAHCLGAYCPNILFPAARECIASMVARGTFPQLNLAPVNFDALFMNYLQQQAGEGTEEHQDA  # FASTA Sequence including deletions and mutations, tags
+      n_term: 1  # Residue number of the N terminal residue (can be negative)
+      c_term: 155 # Residue number of the C terminal residue
+      oligomeric_state: 2 # Oligomeric state of the protein during H/D labelling
+      mutations:
+       - Y109A
+       - T115A
+       - S119A

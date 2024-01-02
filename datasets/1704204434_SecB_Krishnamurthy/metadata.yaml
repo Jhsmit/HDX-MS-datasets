@@ -1,0 +1,10 @@
+#citation.cff author format?
+authors:
+  - name: Srinath Krishnamurthy
+    affiliation: KU Leuven
+
+# List of publications where the datasets are published
+publications:
+  - title: Probing Universal Protein Dynamics Using Hydrogen–Deuterium Exchange Mass Spectrometry-Derived Residue-Level Gibbs Free Energy
+    DOI: 10.1021/acs.analchem.1c02155
+
