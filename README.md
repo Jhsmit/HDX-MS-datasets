@@ -6,12 +6,11 @@ The aim is for thseet formats to converge.
 
 The aim of this repository is to collect curated bottom-up HDX-MS datasets for automated
 processing, data mining and interactive visualization.
-The repository is a work-in-progress.
 
 Datasets should consist of .csv D-uptake/exposure peptide tables. Each dataset is described by
 a `metadata.yaml` file and a `hdx_spec.yaml` file. 
 
-Future implementations aim to include also peptide envelopes.  
+Repository for downloading and loading datasets in python: [hdxms-datasets](https://github.com/Jhsmit/hdxms-datasets)
 
 metadata.yaml
 -------------
