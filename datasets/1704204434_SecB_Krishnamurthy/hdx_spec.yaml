@@ -14,11 +14,6 @@ metadata:  # global metadata equal for all protein states
   temperature:
     value: 30.
     unit: C
-  protein:
-    uniprot: P0AG86
-    model: # Optional protein model information
-      database: pdb
-      entry: 1QYN
 
 states:
   SecB_tetramer:  # Short human-readable identifier for this protein HDX state

@@ -1,3 +1,15 @@
+data:
+  description: SecA monomer and dimer with and without ADP.
+  exchange_type: HD
+
+protein:
+  name: SECA_ECOLI
+  uniprot_id: P10408
+  model: 
+    database: pdb
+    entry: 2VDA
+    chain: A
+
 #citation.cff author format?
 authors:
   - name: Srinath Krishnamurthy
