@@ -1,17 +1,15 @@
 # HDX-MS-datasets
 Repository for HDX-MS datasets
 
-NOTE: This is not the HDX XML dataset format proposed at the HDX-MS 2022 conference, but a .yaml based format currently used in PyHDX. 
-The aim is for thseet formats to converge.
+NOTE: This is not the HDX dataset format proposed at the HDX-MS 2022 conference, which includes isotopic envelopes, but a .yaml based format containing metadata and peptide-average deuterium uptake. 
 
 The aim of this repository is to collect curated bottom-up HDX-MS datasets for automated
 processing, data mining and interactive visualization.
-The repository is a work-in-progress.
 
 Datasets should consist of .csv D-uptake/exposure peptide tables. Each dataset is described by
 a `metadata.yaml` file and a `hdx_spec.yaml` file. 
 
-Future implementations aim to include also peptide envelopes.  
+Repository for downloading and loading datasets in python: [hdxms-datasets](https://github.com/Jhsmit/hdxms-datasets)
 
 metadata.yaml
 -------------
