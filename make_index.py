@@ -28,6 +28,4 @@ dataset_dir = Path("./datasets")
 vault = DataVault(dataset_dir)
 
 index_df = make_index(vault)
-index_df.to_csv(dataset_dir / "index.csv")
-
-# %%
+index_df.to_csv(dataset_dir / "index.csv", index=False)
