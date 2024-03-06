@@ -1,8 +1,14 @@
 data:
-  protein: SecB
-  RCSB_entry: null
-  identifier: null
-  description:
+  description: SecB tetramer and mutant dimer.
+  exchange_type: HD
+
+protein:
+  name: SECB_ECOLI
+  uniprot_id: P0AG86
+  model: 
+    database: pdb
+    entry: 1QYN
+    chain: A/B/C/D
 
 #citation.cff author format?
 authors:
@@ -17,7 +23,7 @@ publications:
     DOI: null
     URL: null
 
-# Repositories where the data is also published or where the raw data is deposited
+# additional repositories; ie raw data is deposited
 repositories:
   - repository: Zenodo
     DOI: null

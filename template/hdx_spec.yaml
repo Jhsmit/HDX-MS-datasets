@@ -7,12 +7,12 @@ data_files:
     format: DynamX
 
 metadata:  # global metadata equal for all protein states
-  pH: 7.5
-  protein:
-    uniprot: P10408
-    model: # Optional protein model information
-      database: pdb
-      entry: 2vda
+  pH: 8.
+  d_percentage: 90.
+  temperature:
+    value: 30.
+    unit: C
+
 
 states:
   SecB_ADP_glucose:  # Short human-readable identifier for this protein HDX state
